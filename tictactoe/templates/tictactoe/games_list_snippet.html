@@ -5,7 +5,7 @@
         <a class="list-group-item" href="{% url 'tictactoe_game_detail' pk=game.id %}">
             {{ game }}:
             {% if game.status == "A" %}
-                {% if game.next_to_move == user %}Your Turn{% else %}Waiting for oppnents move.{% endif %}
+                {% if game.next_to_move == user %}Your Turn{% else %}Waiting for opponents move.{% endif %}
             {% elif game.status == "D" %}
             Draw
             {% elif game.status == "F" and user == game.first_player %}
